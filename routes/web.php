@@ -20,7 +20,7 @@ Route::post('send-mail', function (Request $request) {
     //     ->from('admin@gmail.com', 'Admin😏');
     // });
 
-    Mail::to($request->email)->send(new SendMail($request->message));
+    Mail::to($request->email)->queue(new SendMail($request->message));
 
     return redirect()->back();
 })->name('send.mail');
