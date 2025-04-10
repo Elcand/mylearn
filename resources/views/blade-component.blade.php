@@ -16,10 +16,12 @@
         $languages = ['Php', 'Javascript', 'Java', 'Dart', 'C', 'C++'];
     @endphp
 
-    @foreach ($languages as $language)
+    {{-- @foreach ($languages as $language)
         <x-alert :text="$language" />
-    @endforeach
+    @endforeach --}}
 
+    <x-button style="padding: 10px; background: red; color:white;" class="some-class" />
+    <x-button style="padding: 10px; background: blue; color:white;" class="some-class" />
 </body>
 
 </html>
