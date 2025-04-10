@@ -10,9 +10,16 @@
 
 <body>
     <h3>halo</h3>
-    <x-alert />
-    <x-forms.input />
-    <x-forms.form-select />
+    {{-- <x-alert style="color: red; border: 1px solid green;" text='Test alert!' /> --}}
+
+    @php
+        $languages = ['Php', 'Javascript', 'Java', 'Dart', 'C', 'C++'];
+    @endphp
+
+    @foreach ($languages as $language)
+        <x-alert :text="$language" />
+    @endforeach
+
 </body>
 
 </html>
