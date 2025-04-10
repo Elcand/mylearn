@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\From;
+namespace App\View\Components\Forms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Link extends Component
+class FormSelect extends Component
 {
     /**
      * Create a new component instance.
@@ -21,10 +21,6 @@ class Link extends Component
      */
     public function render(): View|Closure|string
     {
-        return <<<'blade'
-        <div>
-            <!-- It is never too late to be what you might have been. - George Eliot -->
-        </div>
-        blade;
+        return view('components.form.form-select');
     }
 }
