@@ -12,5 +12,13 @@ Route::get('cache', function () {
     $users = Cache::rememberForever('uses', function () {
         return User::all();
     });
+
+    // $users = Cache::pull('users');
+
+    // $users = null;
+
+    if(Cache::has('users')){
+        dd('data is cache');
+    }
     return view('cache', compact('users'));
 });
